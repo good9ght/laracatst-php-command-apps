@@ -21,8 +21,10 @@ $app->register("sayHelloTo")
     ->addArgument("name", InputArgument::OPTIONAL, "Your name.", "World")
     # Definir o código que será executado
     ->setCode(function(InputInterface $input, OutputInterface $output) {
+        $message = "Hello {$input->getArgument('name')}";
         # Definir a saída do app
-        $output->writeln("Hello {$input->getArgument('name')}");
+        // $output->writeln("<comment>{$message}</comment>");
+        $output->writeln("<info>{$message}</info>");
     });
 
 # Iniciar
