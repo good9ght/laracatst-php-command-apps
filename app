@@ -18,13 +18,11 @@ $app->register("sayHelloTo")
     ->setDescription("Offer a greeting to the given person")
     # Adicionar argumento
     // ->addArgument("name", InputArgument::REQUIRED)
-    ->addArgument("name", InputArgument::OPTIONAL, "Your name.")
+    ->addArgument("name", InputArgument::OPTIONAL, "Your name.", "World")
     # Definir o código que será executado
     ->setCode(function(InputInterface $input, OutputInterface $output) {
-        $name = $input->getArgument('name') ?? 'World';
-        $message = "Hello {$name}";
         # Definir a saída do app
-        $output->writeln($message);
+        $output->writeln("Hello {$input->getArgument('name')}");
     });
 
 # Iniciar
