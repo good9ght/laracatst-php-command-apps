@@ -24,3 +24,9 @@ Executar comando
 ```sh 
 $ ./app sayHelloTo [name]
 ```
+
+Executar comando com options
+
+```sh 
+$ ./app sayHelloTo [name] --greeting [Custom greeting]
+```
