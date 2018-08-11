@@ -2,7 +2,7 @@
 <?php
 
 use Symfony\Component\Console\Application;
-use MeuApp\NewCommand;
+use MeuApp\RenderCommand;
 
 # composer autoloader
 require "vendor/autoload.php";
@@ -11,7 +11,7 @@ require "vendor/autoload.php";
 $app = new Application("meu app demo", "1.0");
 
 # Registrando o comando
-$app->add(new NewCommand(new GuzzleHttp\Client));
+$app->add(new RenderCommand);
     
 # Iniciando
 $app->run();
