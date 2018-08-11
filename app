@@ -2,7 +2,7 @@
 <?php
 
 use Symfony\Component\Console\Application;
-use MeuApp\SayHelloCommand;
+use MeuApp\NewCommand;
 
 # composer autoloader
 require "vendor/autoload.php";
@@ -10,10 +10,10 @@ require "vendor/autoload.php";
 # Criando a applicação
 $app = new Application("meu app demo", "1.0");
 
-# Registrar o comando
-$app->add(new SayHelloCommand);
+# Registrando o comando
+$app->add(new NewCommand(new GuzzleHttp\Client));
     
-# Iniciar
+# Iniciando
 $app->run();
 
 
