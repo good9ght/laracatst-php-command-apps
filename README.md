@@ -16,5 +16,11 @@ $ ./app
 Opções do comando
 
 ```sh 
-$ ./app helpSayHelloTo
+$ ./app help sayHelloTo
+```
+
+Executar comando
+
+```sh 
+$ ./app sayHelloTo [name]
 ```
