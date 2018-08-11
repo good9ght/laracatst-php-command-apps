@@ -16,17 +16,11 @@ $ ./app
 Opções do comando
 
 ```sh 
-$ ./app help sayHelloTo
+$ ./app help render
 ```
 
 Executar comando
 
 ```sh 
-$ ./app sayHelloTo [name]
-```
-
-Executar comando com options
-
-```sh 
-$ ./app sayHelloTo [name] --greeting [Custom greeting]
+$ ./app render
 ```
