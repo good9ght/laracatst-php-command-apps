@@ -24,3 +24,7 @@ Executar comando
 ```sh 
 $ ./app render
 ```
+
+Banco
+
+create table tarefas(id integer primary key, descricao text not null);
