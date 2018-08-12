@@ -4,6 +4,7 @@ namespace MeuApp;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Input\InputArgument;
 
 class NovaCommand extends Command {
 
@@ -18,7 +19,7 @@ class NovaCommand extends Command {
         
         $this->db->executar("INSERT INTO tarefas('descricao') VALUES(:descricao)", compact('descricao'));
 
-        $output->writeln("<comment>Tarefa adicionada!</comment>");
+        $output->writeln("<info>Tarefa adicionada!</info>");
 
         $this->exibirTarefas($output);
     }

@@ -8,27 +8,20 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Helper\Table;
 
 class Command extends SymfonyCommand {
-    private $db;
+    protected $db;
 
-    public function __construct(Database $db)
-    {
+    public function __construct(Database $db) {
         $this->db = $db;
-
         parent::__construct();
     }
 
-    public function configure() {
+    protected function exibirTarefas($output) {
         
-    }
-
-    public function execute(InputInterface $input, OutputInterface $output) {
+        if(!$tarefas = $this->db->selecionarTudo('tarefas')) {
+            return $output->writeln("<info>Você não possui tarefas no momento!</info>");
+        }
         
-    }
-
-    public function exibirTarefas($output) {
         $table = new Table($output);
-
-        $tarefas = $this->db->selecionarTudo('tarefas');
 
         $table->setHeaders(['Id', 'Descrição'])
               ->setRows($tarefas)

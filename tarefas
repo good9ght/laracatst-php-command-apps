@@ -2,11 +2,12 @@
 <?php
 
 use Symfony\Component\Console\Application;
+use MeuApp\Database;
 use MeuApp\{
     ExibirCommand,
-    NovaCommand
+    NovaCommand,
+    ConcluirCommand
 };
-use MeuApp\Database;
 
 
 require "vendor/autoload.php";
@@ -27,6 +28,7 @@ $database = new Database($pdo);
 
 $app->add(new ExibirCommand($database));
 $app->add(new NovaCommand($database));
+$app->add(new ConcluirCommand($database));
     
 $app->run();
 

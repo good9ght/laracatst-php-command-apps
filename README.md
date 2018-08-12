@@ -2,29 +2,30 @@
 
 ### Comandos
 
-Tornar o arquivo app executável (change mode executable)
+Tornar o arquivo tarefas executável (change mode executable)
 ```sh 
-$ sudo chmod +x ./app
+$ sudo chmod +x ./tarefas
 ```
 
 Comandos disponíveis
 
 ```sh 
-$ ./app
+$ ./tarefas
 ```
 
 Opções do comando
 
 ```sh 
-$ ./app help render
+$ ./tarefas help
 ```
 
 Executar comando
 
 ```sh 
-$ ./app render
+$ ./tarefas [opção]
 ```
 
-Banco
+### Banco
 
-create table tarefas(id integer primary key, descricao text not null);
+ - sqlite
+ - create table tarefas(id integer primary key, descricao text not null);
